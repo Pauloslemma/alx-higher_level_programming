@@ -17,16 +17,16 @@ All your files should end with a new lin</br>
 The first line of all your files should be exactly #!/bin/bash</br>
 All your files must be executable</br>
 <h3>C Scripts</h3>
-<br>Allowed editors: vi, vim, emacs</br>
-<br>All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89</br>
-<br>All your files should end with a new line</br>
-<br>Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl</br>
-<br>You are not allowed to use global variables</br>
-<br>No more than 5 functions per file</br>
-<br>In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples</br>
-<br>The prototypes of all your functions should be included in your header file called lists.h</br>
-<br>Don’t forget to push your header file</br>
-<br>All your header files should be include guarded</br>
+Allowed editors: vi, vim, emacs</br>
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89</br>
+All your files should end with a new line</br>
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl</br>
+You are not allowed to use global variables</br>
+No more than 5 functions per file</br>
+In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples</br>
+The prototypes of all your functions should be included in your header file called lists.h</br>
+Don’t forget to push your header file</br>
+All your header files should be include guarded</br>
 
 
 <p>0,Run Python file<br>Write a Shell script that runs a Python script.</p>
