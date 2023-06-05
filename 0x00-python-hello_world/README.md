@@ -27,6 +27,8 @@ All your files must be executable</br>
 <br>The prototypes of all your functions should be included in your header file called lists.h</br>
 <br>Don’t forget to push your header file</br>
 <br>All your header files should be include guarded</br>
+
+
 <p>0,Run Python file<br>Write a Shell script that runs a Python script.</p>
 <p>The Python file name will be saved in the environment variable $PYFILE</p>
 <p>1,Run inline<br>Write a Shell script that runs Python code.</p>
