@@ -24,7 +24,7 @@
 - You are not allowed to import any module
 - You are not allowed to use len()
 ## 1. Safe printing of an integers list
-##Write a function that prints an integer with "{:d}".format().
+## Write a function that prints an integer with "{:d}".format().
 
 - Prototype: def safe_print_integer(value):
 - value can be any type (integer, string, etc.)
