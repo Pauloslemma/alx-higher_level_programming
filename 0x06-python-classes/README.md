@@ -1,1 +1,1 @@
-THIS PROJECT FOR PTYHON CLASS AND OBJECT
+This project is for python classes and object
