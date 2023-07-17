@@ -1,9 +1,8 @@
-## Name Of The Project
+## Project Name
 0x0C. Python - Almost a circle
 
 ## Author's Details
-Name: Paulos Lemma
-email: paulslemma1994@gmail.com
+Name: Paulos Lemma<br>email: paulslemma1994@gmail.com
 
 
 ## Requirements
