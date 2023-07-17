@@ -5,6 +5,7 @@ import turtle
 import os.path
 import json
 
+
 class Base:
     """Class that defines the base properties and functionality.
 
@@ -41,10 +42,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes the JSON string representation of list_objs to a file.
+        """Writes the JSON string representation of list_objs to file.
 
         Args:
-            list_objs (list): A list of instances the inherits of Base. for  example:
+            list_objs (list): list of instances inherits of Base. for  example:
             list of Rectangle or Square instances.
         """
         filename = "{}.json".format(cls.__name__)
@@ -77,23 +78,27 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+
         """Returns an instance with all attributes already set.
 
-    Args:
-        dictionary (dict): A dictionary containing the attribute-value pairs for the instance.
+        Args:
+            dictionary (dict): double pointer to a dictionary.
+            cls (any): class.
 
-    To set all attributes, you must create a "dummy" instance first:
-    - For Rectangle or Square instances, create an instance with mandatory
-      attributes (e.g., width, height, size).
-    - Call the update instance method on this "dummy" instance to apply your
-      desired attribute values.
-    - The update method should be defined as def update(self, *args, **kwargs).
-    - Use **dictionary as **kwargs for the update method.
-    - Do not use eval.
+        To use the update method to assign all attributes, you must,
+        create a “dummy” instance before:
+        Create a Rectangle or Square instance with “dummy” mandatory,
+        attributes (width, height, size, etc.),
+        Call update instance method to this “dummy” instance to apply your,
+        real values.
+        You must use the method def update(self, *args, **kwargs).
+        **dictionary must be used as **kwargs of the method update.
+        You are not allowed to use eval.
 
         Returns:
             list: an instance with all attributes already set.
         """
+
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
