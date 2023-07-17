@@ -17,5 +17,4 @@ if __name__ == "__main__":
     print(b4.id)
 
     b5 = Base()
-    print(b5.id)tt
-
+    print(b5.id)
