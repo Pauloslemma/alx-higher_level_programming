@@ -1,21 +1,20 @@
 #!/usr/bin/python3
 """Defines a class Base"""
-import json
-import os.path
 import csv
 import turtle
-
+import os.path
+import json
 
 class Base:
-    """Class that defines properties of Base.
+    """Class that defines the base properties and functionality.
 
-     Attributes:
-        id (int): Identity of each instance.
+    Attributes:
+        id (int): The identity of each instance.
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Creates new instances of Base.
+        """Initialize a new instance of the Base class.
 
         Args:
             id (int, optional): Identity of each instance. Defaults to None.
@@ -28,13 +27,13 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns the JSON string representation of list_dictionaries.
+        """Converts a list of dictionaries to a JSON string representation.
 
-        Args:
-            list_dictionaries (list): list of dictionaries.
+    Args:
+        list_dictionaries (list): The list of dictionaries to be converted.
 
-        Returns:
-            str: jason string representation.
+    Returns:
+        str: The JSON string representation of the list of dictionaries.
         """
         if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
@@ -45,8 +44,8 @@ class Base:
         """Writes the JSON string representation of list_objs to a file.
 
         Args:
-            list_objs (list): instances who inherits of Base - example:
-            list of Rectangle or list of Square instances.
+            list_objs (list): A list of instances the inherits of Base. for  example:
+            list of Rectangle or Square instances.
         """
         filename = "{}.json".format(cls.__name__)
         list_dic = []
@@ -80,19 +79,17 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set.
 
-        Args:
-            dictionary (dict): double pointer to a dictionary.
-            cls (any): class.
+    Args:
+        dictionary (dict): A dictionary containing the attribute-value pairs for the instance.
 
-        To use the update method to assign all attributes, you must,
-        create a “dummy” instance before:
-        Create a Rectangle or Square instance with “dummy” mandatory,
-        attributes (width, height, size, etc.),
-        Call update instance method to this “dummy” instance to apply your,
-        real values.
-        You must use the method def update(self, *args, **kwargs).
-        **dictionary must be used as **kwargs of the method update.
-        You are not allowed to use eval.
+    To set all attributes, you must create a "dummy" instance first:
+    - For Rectangle or Square instances, create an instance with mandatory
+      attributes (e.g., width, height, size).
+    - Call the update instance method on this "dummy" instance to apply your
+      desired attribute values.
+    - The update method should be defined as def update(self, *args, **kwargs).
+    - Use **dictionary as **kwargs for the update method.
+    - Do not use eval.
 
         Returns:
             list: an instance with all attributes already set.
@@ -180,38 +177,5 @@ class Base:
         except(Exception):
             pass
         return(my_obj)
-
-    @staticmethod
-    def draw(list_rectangles, list_squares):
-        """ Opens a window and draws all the Rectangles and Squares
-
-        NOT COMPLETE!!!!!!
-
-        """
-        window = turtle.Screen()
-        turtle.speed(5)
-        turtle.pensize(5)
-        for rectangle in list_rectangles:
-            turtle.penup()
-            turtle.goto(rectangle.x, rectangle.y)
-            turtle.color("black")
-            turtle.pendown()
-            turtle.forward(rectangle.width)
-            turtle.left(90)
-            turtle.forward(rectangle.height)
-            turtle.left(90)
-            turtle.forward(rectangle.width)
-            turtle.left(90)
-            turtle.forward(rectangle.height)
-
-        for square in list_squares:
-            turtle.penup()
-            turtle.goto(square.x, square.y)
-            turtle.pendown()
-            for colors in ["red", "yellow", "purple", "blue"]:
-                turtle.color(colors)
-                turtle.forward(square.size)
-                turtle.left(90)
-        turtle.penup()
 
         window.exitonclick()
