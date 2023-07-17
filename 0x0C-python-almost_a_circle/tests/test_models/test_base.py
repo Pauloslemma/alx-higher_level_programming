@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Unittest for Square class
+"""Unittest for Square Class
 """
 import unittest
 import sys
