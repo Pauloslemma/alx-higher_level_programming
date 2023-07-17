@@ -1,29 +1,29 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle that inherits from Base"""
+"""Defines class Rectangle that inherits from Base"""
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Class that defines properties of Rectangle.
+    """Class that define  Rectangle & inherits.
 
      Attributes:
-        width (int): width of rectangle.
-        height (int): height of rectangle.
-        x (int): x.
-        y (int): y.
+        width (int): The width of rectangle.
+        height (int): The height of rectangle.
+        x (int): x-coordinate.
+        y (int): y-coordinate.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Creates new instances of rectangle.
+        """initial new instances of rectangle.
 
         Args:
             width (int): width of rectangle.
             height (int): height of rectangle.
             x (int, optional): x. Defaults to 0.
             y (int, optional): y. Defaults to 0.
-            id (int, optional): Identity number of rectangle. Defaults to None.
+            id (int, optional): Id of rectangle. Defaults to None.
         """
         self.width = width
         self.height = height
@@ -126,7 +126,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """Property setter for y.
+        """ y Property setter.
 
         Args:
             value (int): y.
@@ -142,10 +142,10 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Calculates area of a rectangle.
+        """Calculates the area of a rectangle.
 
         Returns:
-            int: area.
+            int: the area of the rectangle.
         """
         return self.__width * self.__height
 
